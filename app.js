@@ -5,7 +5,8 @@ const btn4 = document.querySelector("#btn4");
 const btn5 = document.querySelector("#btn5");
 const btn6 = document.querySelector("#btn6");
 const btn7 = document.querySelector("#btn7");
-
+const pionJaune = document.querySelectorAll ("div.pionJaune").value = 1;
+const pionRouge = document.querySelectorAll ("div.pionRouge").value = 2;
 let h1 = document.querySelector("#titre");
 let col1 = document.querySelector("#colonne1");
 let col2 = document.querySelector("#colonne2");
@@ -50,6 +51,7 @@ col1.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 col2.addEventListener("click", function () {
 
@@ -65,6 +67,7 @@ col2.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 col3.addEventListener("click", function () {
 
@@ -80,6 +83,7 @@ col3.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 col4.addEventListener("click", function () {
 
@@ -95,6 +99,7 @@ col4.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 col5.addEventListener("click", function () {
 
@@ -111,6 +116,7 @@ col5.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 col6.addEventListener("click", function () {
 
@@ -126,6 +132,7 @@ col6.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 col7.addEventListener("click", function () {
 
@@ -141,9 +148,15 @@ col7.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 
-function horizontal(){
-
+function horizontale (){
+    let count =  0;
+for (let c = 1; c < 8; c++){
+    count = (document.querySelector(".case"+c+"-6").id) == "pionJaune" ? count+1 : 0;
+console.log(count)
+    if (count >= 4) window.alert("Le jaune à gagné !");
+    
 }
-
+}
