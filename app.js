@@ -26,14 +26,14 @@ let m = 6;
 let n = 6;
 let o = 6;
 
-function joueur() {
-    if (player == 1) {
-        player = 2;
-        h1.innerHTML = "JOUEUR 2";
-    } else {
-        player = 1;
-        h1.innerHTML = "JOUEUR 1";
-    }
+function joueur () {
+        if (player == 1) {
+            player = 2;            
+            h1.innerHTML = "<p class='joueur2'>JOUEUR 2</p>";
+        } else {
+            player = 1;
+            h1.innerHTML = "<p class='joueur1'>JOUEUR 1</p>";
+        }
 }
 
 col1.addEventListener("click", function () {
