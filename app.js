@@ -35,8 +35,7 @@ function joueur () {
         }
 }
 
-
-btn1.addEventListener("click", function () {
+col1.addEventListener("click", function () {
 
     if (i >= 1) {
 
@@ -52,7 +51,7 @@ btn1.addEventListener("click", function () {
         window.alert("Colonne pleine !")
     }
 })
-btn2.addEventListener("click", function () {
+col2.addEventListener("click", function () {
 
     if (j >= 1) {
         if (player == 1) {
@@ -67,7 +66,7 @@ btn2.addEventListener("click", function () {
         window.alert("Colonne pleine !")
     }
 })
-btn3.addEventListener("click", function () {
+col3.addEventListener("click", function () {
 
     if (k >= 1) {
         if (player == 1) {
@@ -82,7 +81,7 @@ btn3.addEventListener("click", function () {
         window.alert("Colonne pleine !")
     }
 })
-btn4.addEventListener("click", function () {
+col4.addEventListener("click", function () {
 
     if (l >= 1) {
         if (player == 1) {
@@ -97,7 +96,7 @@ btn4.addEventListener("click", function () {
         window.alert("Colonne pleine !")
     }
 })
-btn5.addEventListener("click", function () {
+col5.addEventListener("click", function () {
 
 
     if (m >= 1) {
@@ -113,7 +112,7 @@ btn5.addEventListener("click", function () {
         window.alert("Colonne pleine !")
     }
 })
-btn6.addEventListener("click", function () {
+col6.addEventListener("click", function () {
 
     if (n >= 1) {
         if (player == 1) {
@@ -128,7 +127,7 @@ btn6.addEventListener("click", function () {
         window.alert("Colonne pleine !")
     }
 })
-btn7.addEventListener("click", function () {
+col7.addEventListener("click", function () {
 
     if (o >= 1) {
         if (player == 1) {
@@ -143,4 +142,8 @@ btn7.addEventListener("click", function () {
         window.alert("Colonne pleine !")
     }
 })
+
+function horizontal(){
+
+}
 
