@@ -6,6 +6,7 @@ const btn5 = document.querySelector("#btn5");
 const btn6 = document.querySelector("#btn6");
 const btn7 = document.querySelector("#btn7");
 
+let h1 = document.querySelector("#titre");
 let col1 = document.querySelector("#colonne1");
 let col2 = document.querySelector("#colonne2");
 let col3 = document.querySelector("#colonne3");
@@ -14,92 +15,130 @@ let col5 = document.querySelector("#colonne5");
 let col6 = document.querySelector("#colonne6");
 let col7 = document.querySelector("#colonne7");
 
+let player = 1;
+
+let i = 6;
+let j = 6;
+let k = 6;
+let l = 6;
+let m = 6;
+let n = 6;
+let o = 6;
+
+function joueur (e) {
+        if (player == 1) {
+            player = 2;
+            h1.innerHTML = "JOUEUR 2";
+        } else {
+            player = 1;
+            h1.innerHTML = "JOUEUR 1";
+        }
+}
 
 btn1.addEventListener("click", function () {
 
-    console.log(col1.value)
-    var newP = document.createElement('p');
-    newP.id = 'pion';
-    var texte = document.createTextNode("pion");
-    newP.appendChild(texte);
-    col1.appendChild(newP);
+    if (i >= 1) {
 
+        if (player == 1) {
+            document.querySelector(".case1-" + i).id = "pionRouge";
+            i--
+        } else {
+            document.querySelector(".case1-" + i).id = "pionJaune";
+            i--
+        }
+        joueur();
+    } else {
+        window.alert("Colonne pleine !")
+    }
 })
 btn2.addEventListener("click", function () {
-        let l = 0;
-    l++
-    if (l<=6){
-    var newP = document.createElement('p');
-    newP.id = 'pion';
-    var texte = document.createTextNode("pion");
-    newP.appendChild(texte);
-    col2.appendChild(newP);
-} else {
-    window.alert("La Colonne 2 est déjà pleine !")
-}
+
+    if (j >= 1) {
+        if (player == 1) {
+            document.querySelector(".case2-" + j).id = "pionRouge";
+            j--
+        } else {
+            document.querySelector(".case2-" + j).id = "pionJaune";
+            j--
+        }
+        joueur();
+    } else {
+        window.alert("Colonne pleine !")
+    }
 })
 btn3.addEventListener("click", function () {
-        let l = 0;
-    l++
-    if (l<=6){
-    var newP = document.createElement('p');
-    newP.id = 'pion';
-    var texte = document.createTextNode("pion");
-    newP.appendChild(texte);
-    col3.appendChild(newP);
-} else {
-    window.alert("La Colonne 3 est déjà pleine !")
-}
+
+    if (k >= 1) {
+        if (player == 1) {
+            document.querySelector(".case3-" + k).id = "pionRouge";
+            k--
+        } else {
+            document.querySelector(".case3-" + k).id = "pionJaune";
+            k--
+        }
+        joueur();
+    } else {
+        window.alert("Colonne pleine !")
+    }
 })
 btn4.addEventListener("click", function () {
-        let l = 0;
-    l++
-    if (l<=6){
-    var newP = document.createElement('p');
-    newP.id = 'pion';
-    var texte = document.createTextNode("pion");
-    newP.appendChild(texte);
-    col4.appendChild(newP);
-} else {
-    window.alert("La Colonne 4 est déjà pleine !")
-}
+
+    if (l >= 1) {
+        if (player == 1) {
+            document.querySelector(".case4-" + l).id = "pionRouge";
+            l--
+        } else {
+            document.querySelector(".case4-" + l).id = "pionJaune";
+            l--
+        }
+        joueur();
+    } else {
+        window.alert("Colonne pleine !")
+    }
 })
 btn5.addEventListener("click", function () {
-        let l = 0;
-    l++
-    if (l<=6){
-    var newP = document.createElement('p');
-    newP.id = 'pion';
-    var texte = document.createTextNode("pion");
-    newP.appendChild(texte);
-    col5.appendChild(newP);
-} else {
-    window.alert("La Colonne 5 est déjà pleine !")
-}
+
+
+    if (m >= 1) {
+        if (player == 1) {
+            document.querySelector(".case5-" + m).id = "pionRouge";
+            m--
+        } else {
+            document.querySelector(".case5-" + m).id = "pionJaune";
+            m--
+        }
+        joueur();
+    } else {
+        window.alert("Colonne pleine !")
+    }
 })
 btn6.addEventListener("click", function () {
-        let l = 0;
-    l++
-    if (l<=6){
-    var newP = document.createElement('p');
-    newP.id = 'pion';
-    var texte = document.createTextNode("pion");
-    newP.appendChild(texte);
-    col6.appendChild(newP);
-} else {
-    window.alert("La Colonne 6 est déjà pleine !")
-}
+
+    if (n >= 1) {
+        if (player == 1) {
+            document.querySelector(".case6-" + n).id = "pionRouge";
+            n--
+        } else {
+            document.querySelector(".case6-" + n).id = "pionJaune";
+            n--
+        }
+        joueur();
+    } else {
+        window.alert("Colonne pleine !")
+    }
 })
 btn7.addEventListener("click", function () {
-        let l = 0;
-    l++
-    if (l<=6){
-    var newP = document.createElement('p');
-    newP.id = 'pion';
-    var texte = document.createTextNode("pion");
-    newP.appendChild(texte);
-    col7.appendChild(newP);
-} else {
-    window.alert("La Colonne 7 est déjà pleine !")
-}
+
+    if (o >= 1) {
+        if (player == 1) {
+            document.querySelector(".case7-" + o).id = "pionRouge";
+            o--
+        } else {
+            document.querySelector(".case7-" + o).id = "pionJaune";
+            o--
+        }
+        joueur();
+    } else {
+        window.alert("Colonne pleine !")
+    }
 })
