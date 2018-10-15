@@ -5,7 +5,8 @@ const btn4 = document.querySelector("#btn4");
 const btn5 = document.querySelector("#btn5");
 const btn6 = document.querySelector("#btn6");
 const btn7 = document.querySelector("#btn7");
-
+const pionJaune = document.querySelectorAll ("div.pionJaune").value = 1;
+const pionRouge = document.querySelectorAll ("div.pionRouge").value = 2;
 let h1 = document.querySelector("#titre");
 let col1 = document.querySelector("#colonne1");
 let col2 = document.querySelector("#colonne2");
@@ -50,6 +51,7 @@ btn1.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 btn2.addEventListener("click", function () {
 
@@ -65,6 +67,7 @@ btn2.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 btn3.addEventListener("click", function () {
 
@@ -80,6 +83,7 @@ btn3.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 btn4.addEventListener("click", function () {
 
@@ -95,6 +99,7 @@ btn4.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 btn5.addEventListener("click", function () {
 
@@ -111,6 +116,7 @@ btn5.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 btn6.addEventListener("click", function () {
 
@@ -126,6 +132,7 @@ btn6.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 btn7.addEventListener("click", function () {
 
@@ -141,5 +148,15 @@ btn7.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    horizontale()
 })
 
+function horizontale (){
+    let count =  0;
+for (let c = 1; c < 8; c++){
+    count = (document.querySelector(".case"+c+"-6").id) == "pionJaune" ? count+1 : 0;
+console.log(count)
+    if (count >= 4) window.alert("Le jaune à gagné !");
+    
+}
+}
