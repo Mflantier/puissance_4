@@ -15,9 +15,10 @@ a{
 }
 .bouttons{
     padding-top: 3%;
+}
 .jeux {
     border: solid;
-    height: 900px;
+    height: 800px;
 }
 
 .container {
@@ -34,7 +35,7 @@ a{
 
 .case {
     border: solid;
-    height: 148px;
+    height: 131px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.493);
 }
