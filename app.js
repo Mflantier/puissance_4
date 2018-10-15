@@ -5,8 +5,8 @@ const btn4 = document.querySelector("#btn4");
 const btn5 = document.querySelector("#btn5");
 const btn6 = document.querySelector("#btn6");
 const btn7 = document.querySelector("#btn7");
-const pionJaune = document.querySelectorAll ("div.pionJaune").value = 1;
-const pionRouge = document.querySelectorAll ("div.pionRouge").value = 2;
+const pionJaune = document.querySelectorAll("div.pionJaune").value = 1;
+const pionRouge = document.querySelectorAll("div.pionRouge").value = 2;
 let h1 = document.querySelector("#titre");
 let col1 = document.querySelector("#colonne1");
 let col2 = document.querySelector("#colonne2");
@@ -28,11 +28,11 @@ let o = 6;
 
 function joueur () {
         if (player == 1) {
-            player = 2;
-            h1.innerHTML = "JOUEUR 2";
+            player = 2;            
+            h1.innerHTML = "<p class='joueur2'>JOUEUR 2</p>";
         } else {
             player = 1;
-            h1.innerHTML = "JOUEUR 1";
+            h1.innerHTML = "<p class='joueur1'>JOUEUR 1</p>";
         }
 }
 
@@ -51,8 +51,8 @@ col1.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    verticale();
     horizontale();
-    verticale ();
 })
 col2.addEventListener("click", function () {
 
@@ -68,7 +68,8 @@ col2.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    horizontale()
+    verticale();
+    horizontale();
 })
 col3.addEventListener("click", function () {
 
@@ -84,8 +85,8 @@ col3.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    verticale();
     horizontale();
-    verticale ();
 })
 col4.addEventListener("click", function () {
 
@@ -101,8 +102,8 @@ col4.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    verticale();
     horizontale();
-    verticale ();
 })
 col5.addEventListener("click", function () {
 
@@ -119,8 +120,8 @@ col5.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    verticale();
     horizontale();
-    verticale ();
 })
 col6.addEventListener("click", function () {
 
@@ -136,8 +137,8 @@ col6.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    verticale();
     horizontale();
-    verticale ();
 })
 col7.addEventListener("click", function () {
 
@@ -153,16 +154,40 @@ col7.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
+    verticale();
     horizontale();
-    verticale ();
 })
 
-function horizontale (){
-    let count =  0;
-for (let c = 1; c < 8; c++){
-    count = (document.querySelector(".case"+c+"-6").id) == "pionJaune" ? count+1 : 0;
-
-    if (count >= 4) window.alert("Le jaune à gagné !");
-    
+function horizontale() {
+    let count = 0;
+    for (let li = 1; li < 7; li++) {
+        for (let co = 1; co < 8; co++) {
+            count = (document.querySelector(".case" + co + "-" + li).id) == "pionJaune" ? count + 1 : 0;
+            if (count >= 4) window.alert("Le jaune a gagné !");
+        }
+    }
+    count = 0;
+    for (let li = 1; li < 7; li++) {
+        for (let co = 1; co < 8; co++) {
+            count = (document.querySelector(".case" + co + "-" + li).id) == "pionRouge" ? count + 1 : 0;
+            if (count >= 4) window.alert("Le rouge a gagné !");
+        }
+    }
 }
+function verticale() {
+    let count = 0;
+    for (let co = 1; co < 8; co++) {
+        for (let li = 1; li < 7; li++) {
+            console.log(li + " ..... " + co)
+            count = (document.querySelector(".case" + co + "-" + li).id) == "pionJaune" ? count + 1 : 0;
+            if (count >= 4) window.alert("Le jaune a gagné !");
+        }
+    }
+    count = 0;
+    for (let co = 1; co < 8; co++) {
+        for (let li = 1; li < 7; li++) {
+            count = (document.querySelector(".case" + co + "-" + li).id) == "pionRouge" ? count + 1 : 0;
+            if (count >= 4) window.alert("Le rouge a gagné !");
+        }
+    }
 }
