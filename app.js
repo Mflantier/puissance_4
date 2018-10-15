@@ -35,6 +35,7 @@ function joueur () {
         }
 }
 
+
 btn1.addEventListener("click", function () {
 
     if (i >= 1) {
