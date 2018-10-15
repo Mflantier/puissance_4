@@ -1,6 +1,20 @@
-#pion {
-    width: 100px;
-    padding: 6px;
-    margin: 6px;
-    border: solid black 1px;
+.jeux {
+    border: solid;
+    height: 900px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.colonne {
+    border: solid;
+    width: 25%;
+    height: 100%;
+    background-color: #70a1ff;
+}
+
+.case {
+    border: solid;
+    height: 148px;
 }
