@@ -25,7 +25,7 @@ let m = 6;
 let n = 6;
 let o = 6;
 
-function joueur (e) {
+function joueur () {
         if (player == 1) {
             player = 2;
             h1.innerHTML = "JOUEUR 2";
@@ -142,3 +142,4 @@ btn7.addEventListener("click", function () {
         window.alert("Colonne pleine !")
     }
 })
+
