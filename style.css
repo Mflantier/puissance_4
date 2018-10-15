@@ -49,3 +49,18 @@ background-color: yellow;
 #pionRouge {
 background-color: red;
 }
+
+.joueurx {
+    border: solid;
+    background-color: #70a1ff;
+}
+
+.joueur1 {
+    background-color: red;
+    border: solid;
+}
+
+.joueur2 {
+    background-color: yellow;
+    border: solid;
+}
