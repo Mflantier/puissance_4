@@ -51,7 +51,8 @@ col1.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    horizontale()
+    horizontale();
+    verticale ();
 })
 col2.addEventListener("click", function () {
 
@@ -83,7 +84,8 @@ col3.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    horizontale()
+    horizontale();
+    verticale ();
 })
 col4.addEventListener("click", function () {
 
@@ -99,7 +101,8 @@ col4.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    horizontale()
+    horizontale();
+    verticale ();
 })
 col5.addEventListener("click", function () {
 
@@ -116,7 +119,8 @@ col5.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    horizontale()
+    horizontale();
+    verticale ();
 })
 col6.addEventListener("click", function () {
 
@@ -132,7 +136,8 @@ col6.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    horizontale()
+    horizontale();
+    verticale ();
 })
 col7.addEventListener("click", function () {
 
@@ -148,14 +153,15 @@ col7.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    horizontale()
+    horizontale();
+    verticale ();
 })
 
 function horizontale (){
     let count =  0;
 for (let c = 1; c < 8; c++){
     count = (document.querySelector(".case"+c+"-6").id) == "pionJaune" ? count+1 : 0;
-console.log(count)
+
     if (count >= 4) window.alert("Le jaune à gagné !");
     
 }
