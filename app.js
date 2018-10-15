@@ -178,7 +178,6 @@ function verticale() {
     let count = 0;
     for (let co = 1; co < 8; co++) {
         for (let li = 1; li < 7; li++) {
-            console.log(li + " ..... " + co)
             count = (document.querySelector(".case" + co + "-" + li).id) == "pionJaune" ? count + 1 : 0;
             if (count >= 4) window.alert("Le jaune a gagné !");
         }
