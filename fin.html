@@ -7,19 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fin.css">
     <title>Puissance 4</title>
 </head>
 
 <body>
         <div class="container-fluid">
+            <canvas id="confetti" class="confcanvas"></canvas>
                 <div class="container">
-                    <h1 class="acceuil d-flex justify-content-center">Fin</h1>
-                    <div></div>
                     <div class="bouttons d-flex justify-content-center">
-                        <a href="#acceuil"><button type="button" id="niveau1">Acceuil</button></a>
-                        <a href="#rejouer"><button type="button" id="niveau2">Rejouer même mode</button></a>
-                        <a href="#mode"><button type="button" id="niveau3">Changer de mode</button></a>
+                        <h1 class="acceuil">Bien joué !</h1>
+                        <a href="accueil.html" class="btn_accueil"><button type="button" class="btn btn-primary">Retourner à l'accueil</button></a>
+                        <img src="./media/Tacodog.gif" alt="" class="tacodog">
                     </div>
                 </div>
             </div>
@@ -29,7 +28,8 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="fin.js"></script>
+    <script src="confetti.js"></script>
 </body>
 
 </html>
