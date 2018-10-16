@@ -1,12 +1,12 @@
 let grille = document.querySelector("#grille");
-
+let player = 1;
 let tableau = [ // tableau general
     [null, null, null, null, null, null, null], // Element  0 du tableau general
     [null, null, null, null, null, null, null], // Element  1 du tableau general
     [null, null, null, null, null, null, null], // Element  2 du tableau general
     [null, null, null, null, null, null, null], // Element  3 du tableau general
     [null, null, null, null, null, null, null], // Element  4 du tableau general
-    [null, null, null, null, null, null, null]  // Element  5 du tableau general
+    [null, null, null, null, null, null, null] // Element  5 du tableau general
 ];
 
 tableau[i][4]
@@ -23,31 +23,41 @@ function verification() {
 // const pionRouge = document.querySelectorAll("div.pionRouge").value = 2;
 // let player = 1;
 
-// function joueur() {
-//     if (player == 1) {
-//         player = 2;
-//         h1.innerHTML = "<p class='joueur2'>JOUEUR 2</p>";
-//     } else {
-//         player = 1;
-//         h1.innerHTML = "<p class='joueur1'>JOUEUR 1</p>";
-//     }
-// }
+function joueur() {
+    if (player == 1) {
+        player = 2;
+    } else {
+        player = 1;
+    }
+}
 for (let i = 0; i < tableau.length; i++) {
     for (let j = 0; j < tableau[i].length; j++) {
 
 
-        var newP = document.createElement  ('div');
+        var newP = document.createElement('div');
         newP.className = 'case';
         grille.appendChild(newP);
         newP.innerHTML = tableau[i][j]
     }
 }
 
-tableau[0][6].addEventListener("click", function(){
-console.log("Batard")
+window.addEventListener("click", function (e) {
+    if (e.target.className == "case") {
+        if (player == 1) {
+            if (e.target.className == "case") {
+                e.target.className = "pionRouge"
+                joueur()
+            }
+        } else {
+            e.target.className = "pionJaune"
+            joueur()
+        }
+    } else {
+        console.log("Cliquez sur une case vide !")
+    }
+
+
 })
-
-
 
 
 // const pionJaune = document.querySelectorAll("div.pionJaune").value = 1;
