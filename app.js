@@ -1,3 +1,7 @@
+let grille = [[,,,,,,],[,,,,,,],[,,,,,,],[,,,,,,],[,,,,,,],[,,,,,,]];
+
+
+
 const btn1 = document.querySelector("#btn1");
 const btn2 = document.querySelector("#btn2");
 const btn3 = document.querySelector("#btn3");
@@ -51,9 +55,19 @@ col1.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    verticale();
-    horizontale();
-    diag();
+    if (i <=3){
+        let count = 0;
+let li = i;
+let co = 1;
+        for (li; li<8; li++) {
+            count = (document.querySelector(".case" + co + "-" + li).id) == "pionRouge" ? count + 1 : 0;
+            co++;
+            if (count >= 4) window.alert("Le rouge a gagné !");
+        }
+
+    }
+    vertiHori()
+    antiDiagonale()
 })
 col2.addEventListener("click", function () {
 
@@ -69,9 +83,8 @@ col2.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    verticale();
-    horizontale();
-    diag();
+    vertiHori()
+    antiDiagonale()
 })
 col3.addEventListener("click", function () {
 
@@ -87,9 +100,8 @@ col3.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    verticale();
-    horizontale();
-    diag();
+    vertiHori()
+    antiDiagonale()
 })
 col4.addEventListener("click", function () {
 
@@ -105,9 +117,8 @@ col4.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    verticale();
-    horizontale();
-    diag();
+    vertiHori()
+    antiDiagonale()
 })
 col5.addEventListener("click", function () {
 
@@ -124,9 +135,8 @@ col5.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    verticale();
-    horizontale();
-    diag();
+    vertiHori()
+    antiDiagonale()
 })
 col6.addEventListener("click", function () {
 
@@ -142,9 +152,8 @@ col6.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    verticale();
-    horizontale();
-    diag();
+    vertiHori()
+    antiDiagonale()
 })
 col7.addEventListener("click", function () {
 
@@ -160,12 +169,11 @@ col7.addEventListener("click", function () {
     } else {
         window.alert("Colonne pleine !")
     }
-    verticale();
-    horizontale();
-    diag();
+    vertiHori()
+    antiDiagonale()
 })
 
-function horizontale() {
+function vertiHori() {
     let count = 0;
     for (let li = 1; li < 7; li++) {
         for (let co = 1; co < 8; co++) {
@@ -176,8 +184,8 @@ function horizontale() {
     count = 0;
     for (let li = 1; li < 7; li++) {
         for (let co = 1; co < 8; co++) {
-            count = (document.querySelector(".case" + co + "-" + li).id) == "pionRouge" ? count + 1 : 0;
-            if (count >= 4) window.alert("Le rouge a gagné !");
+            count = (document.querySelector(".case" + co + "-" + li).id) == "pionRouge" ? count + 1 : 0
+            if (count >= 4) window.alert("Le rouge a gagné !")
         }
     }
     
