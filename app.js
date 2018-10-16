@@ -9,12 +9,10 @@ let tableau = [ // tableau general
     [null, null, null, null, null, null, null] // Element  5 du tableau general
 ];
 
-tableau[i][4]
-
 function verification() {
-    for (i = 0; i < 7; i++){
-        if (tableau[i][4] == null){
-            
+    for (i = 0; i < 7; i++) {
+        if (tableau[i][4] == null) {
+
         }
     }
 }
@@ -25,8 +23,10 @@ function verification() {
 
 function joueur() {
     if (player == 1) {
+        changementCouleurJ1();
         player = 2;
     } else {
+        changementCouleurJ2();
         player = 1;
     }
 }
@@ -58,6 +58,20 @@ window.addEventListener("click", function (e) {
 
 
 })
+
+function changementCouleurJ1() {
+    document.getElementById("titre").innerHTML = "JOUEUR 1";
+    document.getElementById("titre").style.backgroundColor = "red";
+    document.getElementById("titre").style.border = "solid black";
+    document.getElementById("titre").style.width = "25%";
+    document.getElementById("titre").style.margin = "auto";
+}
+
+function changementCouleurJ2() {
+    document.getElementById("titre").innerHTML = "JOUEUR 2";
+    document.getElementById("titre").style.backgroundColor = "yellow";
+}
+
 
 
 

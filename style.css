@@ -1,14 +1,9 @@
-#blanc{
-    background-color: rgb(255, 255, 255);
-    border: solid;
-    margin: auto;
-    height: 115px;
-    width: 115px;
-    border-radius: 50%;
+body {
+    background-color: #F79F1F;
 }
 
 .case{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.637);
     border: solid;
     margin: auto;
     height: 115px;
@@ -16,7 +11,9 @@
     border-radius: 50%;
 }
 .pionJaune{
-    background-color: rgb(255, 255, 0);
+    background: url(./media/pionjaune.png);
+    background-size: 109px;
+    background-repeat: no-repeat;
     border: solid;
     margin: auto;
     height: 115px;
@@ -24,7 +21,9 @@
     border-radius: 50%;
 }
 .pionRouge{
-    background-color: rgb(255, 0, 0);
+    background: url(./media/pionrouge.png);
+    background-size: 109px;
+    background-repeat: no-repeat;
     border: solid;
     margin: auto;
     height: 115px;
@@ -33,7 +32,11 @@
 }
 
 #grille {
-    width: 100vw;
+    border-radius: 10px;
+    background-color: #1e3799;
+    width: 60%;
+    border: solid;
+    margin: auto;
     height: 100%;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
