@@ -1,13 +1,21 @@
 let grille = document.querySelector("#grille");
 let player = 1;
 let tableau = [ // tableau general
-    [null, " ", null, null, null, null, " "], // Element  0 du tableau general
-    [null, " ", null, null, null, null, null], // Element  1 du tableau general
-    [null, " ", null, null, null, null, null], // Element  2 du tableau general
-    [null, " ", null, null, null, null, null], // Element  3 du tableau general
-    [null, " ", null, null, null, null, null], // Element  4 du tableau general
-    [null, " ", null, null, null, null, null] // Element  5 du tableau general
+    [null, null, null, null, null, null, null], // Element  0 du tableau general
+    [null, null, null, null, null, null, null], // Element  1 du tableau general
+    [null, null, null, null, null, null, null], // Element  2 du tableau general
+    [null, null, null, null, null, null, null], // Element  3 du tableau general
+    [null, null, null, null, null, null, null], // Element  4 du tableau general
+    [null, null, null, null, null, null, null] // Element  5 du tableau general
 ];
+
+function verification() {
+    for (i = 0; i < 7; i++) {
+        if (tableau[i][4] == null) {
+
+        }
+    }
+}
 
 // const pionJaune = document.querySelectorAll("div.pionJaune").value = 1;
 // const pionRouge = document.querySelectorAll("div.pionRouge").value = 2;
@@ -15,8 +23,10 @@ let tableau = [ // tableau general
 
 function joueur() {
     if (player == 1) {
+        changementCouleurJ1();
         player = 2;
     } else {
+        changementCouleurJ2();
         player = 1;
     }
 }
@@ -45,7 +55,26 @@ window.addEventListener("click", function (e) {
     }
 
 
- })
+})
+
+function changementCouleurJ1() {
+    document.getElementById("titre").innerHTML = "JOUEUR 1";
+    document.getElementById("titre").style.backgroundColor = "red";
+    document.getElementById("titre").style.border = "solid black";
+    document.getElementById("titre").style.width = "25%";
+    document.getElementById("titre").style.margin = "auto";
+}
+
+function changementCouleurJ2() {
+    document.getElementById("titre").innerHTML = "JOUEUR 2";
+    document.getElementById("titre").style.backgroundColor = "yellow";
+}
+
+
+
+
+
+
 
 
 
