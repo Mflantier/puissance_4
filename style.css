@@ -1,4 +1,39 @@
-.acceuil{
+#blanc{
+    background-color: rgb(255, 255, 255);
+    border: solid;
+    margin: auto;
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+}
+
+.case{
+    background-color: rgb(255, 255, 255);
+    border: solid;
+    margin: auto;
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+}
+
+#grille {
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 15px;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    
+}
+
+
+
+
+
+
+
+/* .acceuil{
     font-size: 130px;
     padding-bottom: 120px;
     padding-top: 50px;
@@ -69,4 +104,4 @@ background-size: 108px;
 .joueur2 {
     background-color: yellow;
     border: solid;
-}
+} */
