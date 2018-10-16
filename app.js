@@ -1,13 +1,23 @@
 let grille = document.querySelector("#grille");
 
 let tableau = [ // tableau general
-    [null, null, null, null, null, null, " "], // Element  0 du tableau general
+    [null, null, null, null, null, null, null], // Element  0 du tableau general
     [null, null, null, null, null, null, null], // Element  1 du tableau general
     [null, null, null, null, null, null, null], // Element  2 du tableau general
     [null, null, null, null, null, null, null], // Element  3 du tableau general
     [null, null, null, null, null, null, null], // Element  4 du tableau general
     [null, null, null, null, null, null, null]  // Element  5 du tableau general
 ];
+
+tableau[i][4]
+
+function verification() {
+    for (i = 0; i < 7; i++){
+        if (tableau[i][4] == null){
+            
+        }
+    }
+}
 
 // const pionJaune = document.querySelectorAll("div.pionJaune").value = 1;
 // const pionRouge = document.querySelectorAll("div.pionRouge").value = 2;
@@ -36,6 +46,8 @@ for (let i = 0; i < tableau.length; i++) {
 tableau[0][6].addEventListener("click", function(){
 console.log("Batard")
 })
+
+
 
 
 // const pionJaune = document.querySelectorAll("div.pionJaune").value = 1;
