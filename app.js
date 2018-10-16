@@ -60,6 +60,23 @@ window.addEventListener("click", function (e) {
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const pionJaune = document.querySelectorAll("div.pionJaune").value = 1;
 // const pionRouge = document.querySelectorAll("div.pionRouge").value = 2;
 // let h1 = document.querySelector("#titre");
