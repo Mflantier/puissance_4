@@ -1,12 +1,12 @@
 let grille = document.querySelector("#grille");
 let player = 1;
 let tableau = [ // tableau general
-    [null, null, null, null, null, null, " "], // Element  0 du tableau general
-    [null, null, null, null, null, null, null], // Element  1 du tableau general
-    [null, null, null, null, null, null, null], // Element  2 du tableau general
-    [null, null, null, null, null, null, null], // Element  3 du tableau general
-    [null, null, null, null, null, null, null], // Element  4 du tableau general
-    [null, null, null, null, null, null, null] // Element  5 du tableau general
+    [null, " ", null, null, null, null, " "], // Element  0 du tableau general
+    [null, " ", null, null, null, null, null], // Element  1 du tableau general
+    [null, " ", null, null, null, null, null], // Element  2 du tableau general
+    [null, " ", null, null, null, null, null], // Element  3 du tableau general
+    [null, " ", null, null, null, null, null], // Element  4 du tableau general
+    [null, " ", null, null, null, null, null] // Element  5 du tableau general
 ];
 
 // const pionJaune = document.querySelectorAll("div.pionJaune").value = 1;
@@ -37,20 +37,15 @@ window.addEventListener("click", function (e) {
             if (e.target.className == "case") {
                 e.target.className = "pionRouge"
                 joueur()
-            }
+             }
         } else {
             e.target.className = "pionJaune"
-            joueur()
-        }
-    } else {
+             joueur()         }     } else {
         console.log("Cliquez sur une case vide !")
     }
 
 
-})
-
-
-
+ })
 
 
 
