@@ -19,7 +19,7 @@ let col7 = document.querySelector("#colonne7");
 let player = 1;
 
 let i = 6;
-let j = 6;
+let j = 6; 
 let k = 6;
 let l = 6;
 let m = 6;
@@ -53,6 +53,7 @@ col1.addEventListener("click", function () {
     }
     verticale();
     horizontale();
+    diag();
 })
 col2.addEventListener("click", function () {
 
@@ -70,6 +71,7 @@ col2.addEventListener("click", function () {
     }
     verticale();
     horizontale();
+    diag();
 })
 col3.addEventListener("click", function () {
 
@@ -87,6 +89,7 @@ col3.addEventListener("click", function () {
     }
     verticale();
     horizontale();
+    diag();
 })
 col4.addEventListener("click", function () {
 
@@ -104,6 +107,7 @@ col4.addEventListener("click", function () {
     }
     verticale();
     horizontale();
+    diag();
 })
 col5.addEventListener("click", function () {
 
@@ -122,6 +126,7 @@ col5.addEventListener("click", function () {
     }
     verticale();
     horizontale();
+    diag();
 })
 col6.addEventListener("click", function () {
 
@@ -139,6 +144,7 @@ col6.addEventListener("click", function () {
     }
     verticale();
     horizontale();
+    diag();
 })
 col7.addEventListener("click", function () {
 
@@ -156,6 +162,7 @@ col7.addEventListener("click", function () {
     }
     verticale();
     horizontale();
+    diag();
 })
 
 function horizontale() {
@@ -173,6 +180,7 @@ function horizontale() {
             if (count >= 4) window.alert("Le rouge a gagné !");
         }
     }
+    
 }
 function verticale() {
     let count = 0;
