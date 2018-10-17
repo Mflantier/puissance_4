@@ -459,22 +459,13 @@ function diagonale() {
     count = 0;
     y = 5;
     x = 1;
-    for (let diag = 0; diag < 6; diag++) { // Diagonale case1-3 case 2-4 case 3-5 case4-6
-        count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
-        x++
-        y--
-        if (count >= 4) window.alert("Le rouge a gagné !");
-    }
-    count = 0;
-    y = 5;
-    x = 1;
     for (let diag = 0; diag < 5; diag++) { // Diagonale case1-3 case 2-4 case 3-5 case4-6
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y--
         if (count >= 4) window.alert("Le rouge a gagné !");
     }
-    count = 0;
+     count = 0;
     y = 4;
     x = 1;
     for (let diag = 0; diag < 4; diag++) { // Diagonale case1-3 case 2-4 case 3-5 case4-6
@@ -534,7 +525,7 @@ function diagonale() {
     y = 4;
     x = 1;
     for (let diag = 0; diag < 4; diag++) { // Diagonale case1-3 case 2-4 case 3-5 case4-6
-        count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
+        count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count+1 : 0;
         x++
         y--
         if (count >= 4) window.alert("Le jaune a gagné !");
