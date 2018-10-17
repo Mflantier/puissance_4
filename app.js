@@ -9,8 +9,7 @@ let col5 = document.querySelector("#colonne5");
 let col6 = document.querySelector("#colonne6");
 let col7 = document.querySelector("#colonne7");
 let jpp = document.querySelector(".case");
-let btn1 = document.querySelector("#niveau1");
-let btn2 = document.querySelector("#niveau2");
+let button = 1;
 let player = 1;
 
 let i = 6;
@@ -21,13 +20,7 @@ let m = 6;
 let n = 6;
 let o = 6;
 
-console.log(btn1.value)
-    if (btn.value == 1){
-        joueur();
-    }
-    else if(btn2 == 1){
-        ordinateur();
-    }
+
 
 
 function joueur() {
@@ -190,28 +183,28 @@ function vertiHori() {
     for (let li = 1; li < 7; li++) {
         for (let co = 1; co < 8; co++) {
             count = (document.querySelector(".case" + co + "-" + li).id) == "pionJaune" ? count + 1 : 0;
-            if (count >= 4) document.location.href="fin2.html"; 
+            if (count >= 4) document.location.href = "fin2.html";
         }
     }
     count = 0;
     for (let li = 1; li < 7; li++) {
         for (let co = 1; co < 8; co++) {
             count = (document.querySelector(".case" + co + "-" + li).id) == "pionRouge" ? count + 1 : 0
-            if (count >= 4) document.location.href="fin.html"; 
+            if (count >= 4) document.location.href = "fin.html";
         }
     }
     count = 0;
     for (let co = 1; co < 8; co++) {
         for (let li = 1; li < 7; li++) {
             count = (document.querySelector(".case" + co + "-" + li).id) == "pionJaune" ? count + 1 : 0;
-            if (count >= 4) document.location.href="fin2.html"; 
+            if (count >= 4) document.location.href = "fin2.html";
         }
     }
     count = 0;
     for (let co = 1; co < 8; co++) {
         for (let li = 1; li < 7; li++) {
             count = (document.querySelector(".case" + co + "-" + li).id) == "pionRouge" ? count + 1 : 0;
-            if (count >= 4) document.location.href="fin.html"; 
+            if (count >= 4) document.location.href = "fin.html";
         }
     }
 }
@@ -228,7 +221,7 @@ function antiDiagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y++
-        if (count >= 4) document.location.href="fin.html"; 
+        if (count >= 4) document.location.href = "fin.html";
     }
 
 
@@ -239,7 +232,7 @@ function antiDiagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y++
-        if (count >= 4) document.location.href="fin.html"; 
+        if (count >= 4) document.location.href = "fin.html";
     }
 
 
@@ -250,7 +243,7 @@ function antiDiagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y++
-        if (count >= 4) document.location.href="fin.html"; 
+        if (count >= 4) document.location.href = "fin.html";
     }
 
 
@@ -262,7 +255,7 @@ function antiDiagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y++
-        if (count >= 4) document.location.href="fin.html"; 
+        if (count >= 4) document.location.href = "fin.html";
     }
 
 
@@ -273,7 +266,7 @@ function antiDiagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y++
-        if (count >= 4) document.location.href="fin.html"; 
+        if (count >= 4) document.location.href = "fin.html";
     }
 
 
@@ -284,7 +277,7 @@ function antiDiagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y++
-        if (count >= 4) document.location.href="fin.html"; 
+        if (count >= 4) document.location.href = "fin.html";
     }
 
     // =============================== VERIFICATION DE JAUNE =======================================================================================
@@ -296,7 +289,7 @@ function antiDiagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
         x++
         y++
-        if (count >= 4) document.location.href="fin2.html"; 
+        if (count >= 4) document.location.href = "fin2.html";
     }
 
     count = 0;
@@ -306,7 +299,7 @@ function antiDiagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
         x++
         y++
-        if (count >= 4) document.location.href="fin2.html"; 
+        if (count >= 4) document.location.href = "fin2.html";
     }
 
     count = 0;
@@ -316,7 +309,7 @@ function antiDiagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
         x++
         y++
-        if (count >= 4) document.location.href="fin2.html"; 
+        if (count >= 4) document.location.href = "fin2.html";
     }
     count = 0;
     y = 2;
@@ -325,7 +318,7 @@ function antiDiagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
         x++
         y++
-        if (count >= 4) document.location.href="fin2.html"; 
+        if (count >= 4) document.location.href = "fin2.html";
     }
     count = 0;
     y = 3;
@@ -334,7 +327,7 @@ function antiDiagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
         x++
         y++
-        if (count >= 4) document.location.href="fin2.html"; 
+        if (count >= 4) document.location.href = "fin2.html";
     }
 
     count = 0;
@@ -344,7 +337,7 @@ function antiDiagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
         x++
         y++
-        if (count >= 4) document.location.href="fin2.html"; 
+        if (count >= 4) document.location.href = "fin2.html";
     }
 }
 
@@ -358,7 +351,7 @@ function diagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y--
-        if (count >= 4) document.location.href="fin.html"; 
+        if (count >= 4) document.location.href = "fin.html";
     }
     count = 0;
     y = 7;
@@ -367,7 +360,7 @@ function diagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y--
-        if (count >= 4) document.location.href="fin.html"; 
+        if (count >= 4) document.location.href = "fin.html";
     }
     count = 0;
     y = 7;
@@ -376,7 +369,7 @@ function diagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y--
-        if (count >= 4) document.location.href="fin.html"; 
+        if (count >= 4) document.location.href = "fin.html";
     }
     count = 0;
     y = 6;
@@ -385,7 +378,7 @@ function diagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y--
-        if (count >= 4) document.location.href="fin.html"; 
+        if (count >= 4) document.location.href = "fin.html";
     }
     count = 0;
     y = 5;
@@ -394,7 +387,7 @@ function diagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y--
-        if (count >= 4) document.location.href="fin.html"; 
+        if (count >= 4) document.location.href = "fin.html";
     }
 
     count = 0;
@@ -404,7 +397,7 @@ function diagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionRouge" ? count + 1 : 0;
         x++
         y--
-        if (count >= 4) document.location.href="fin.html"; 
+        if (count >= 4) document.location.href = "fin.html";
     }
 
     // =============================== VERIFICATION DE JAUNE =======================================================================================
@@ -415,7 +408,7 @@ function diagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
         x++
         y--
-        if (count >= 4) document.location.href="fin2.html"; 
+        if (count >= 4) document.location.href = "fin2.html";
     }
     count = 0;
     y = 7;
@@ -424,7 +417,7 @@ function diagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
         x++
         y--
-        if (count >= 4) document.location.href="fin2.html"; 
+        if (count >= 4) document.location.href = "fin2.html";
     }
     count = 0;
     y = 7;
@@ -433,7 +426,7 @@ function diagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
         x++
         y--
-        if (count >= 4) document.location.href="fin2.html"; 
+        if (count >= 4) document.location.href = "fin2.html";
     }
     count = 0;
     y = 6;
@@ -442,7 +435,7 @@ function diagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
         x++
         y--
-        if (count >= 4) document.location.href="fin2.html"; 
+        if (count >= 4) document.location.href = "fin2.html";
     }
     count = 0;
     y = 5;
@@ -451,15 +444,15 @@ function diagonale() {
         count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
         x++
         y--
-        if (count >= 4) document.location.href="fin2.html"; 
+        if (count >= 4) document.location.href = "fin2.html";
     }
     count = 0;
     y = 4;
     x = 1;
     for (let diag = 0; diag < 4; diag++) { // Diagonale case1-3 case 2-4 case 3-5 case4-6
-        count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count+1 : 0;
+        count = (document.querySelector(".case" + y + "-" + x).id) == "pionJaune" ? count + 1 : 0;
         x++
         y--
-        if (count >= 4) document.location.href="fin2.html"; 
+        if (count >= 4) document.location.href = "fin2.html";
     }
 }
