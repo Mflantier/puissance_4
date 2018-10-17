@@ -32,12 +32,13 @@ function joueur() {
 }
 for (let i = 0; i < tableau.length; i++) {
     for (let j = 0; j < tableau[i].length; j++) {
-
-
         var newP = document.createElement('div');
         newP.className = 'case';
+        newP.dataset.ligne = i;
+        newP.dataset.colonne = j;
         grille.appendChild(newP);
         newP.innerHTML = tableau[i][j]
+        console.log(newP.dataset.position)
     }
 }
 
@@ -53,8 +54,6 @@ window.addEventListener("click", function (e) {
              joueur()         }     } else {
         console.log("Cliquez sur une case vide !")
     }
-
-
 })
 
 function changementCouleurJ1() {
