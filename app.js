@@ -38,12 +38,15 @@ for (let i = 0; i < tableau.length; i++) {
         newP.dataset.colonne = j;
         grille.appendChild(newP);
         newP.innerHTML = tableau[i][j]
-        console.log(newP.dataset.position)
     }
 }
 
 window.addEventListener("click", function (e) {
     if (e.target.className == "case") {
+        let col = e.target.dataset.colonne;
+        let li = e.target.dataset.ligne;
+        this.console.log(li , col)
+
         if (player == 1) {
             if (e.target.className == "case") {
                 e.target.className = "pionRouge"
