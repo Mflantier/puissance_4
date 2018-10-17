@@ -26,44 +26,156 @@ let o = 6;
 function joueur() {
     if (button == 1) {
 
-        if (player == 1) {
-            player = 2;
-            h1.innerHTML = "<p class='joueur2'>JOUEUR 2</p>";
-        } else {
-            player = 1;
-            h1.innerHTML = "<p class='joueur1'>JOUEUR 1</p>";
-        }
-
-    } else if (button == 2) {
-
-        if (player == 1) {
-            player = 2;
-            h1.innerHTML = "<p class='joueur2'>ORDINATEUR</p>";
-        } else {
-            player = 1;
-            h1.innerHTML = "<p class='joueur1'>JOUEUR 1</p>";
-        }
-
-    }
 }
 
+function joueur() {
+    let button = 1
+    if (button == 1) {
+        col1.addEventListener("click", function () {
+            if (i >= 1) {
+        
+                if (player == 1) {
+                    document.querySelector(".case1-" + i).id = "pionRouge";
+                    i--
+                } else {
+                    document.querySelector(".case1-" + i).id = "pionJaune";
+                    i--
+                }
+                joueur();
+            } else {
+                window.alert("Colonne pleine !")
+            }
+        
+            vertiHori()
+            diagonale()
+            antiDiagonale()
+        })
+        col2.addEventListener("click", function () {
+        
+            if (j >= 1) {
+                if (player == 1) {
+                    document.querySelector(".case2-" + j).id = "pionRouge";
+                    j--
+                } else {
+                    document.querySelector(".case2-" + j).id = "pionJaune";
+                    j--
+                }
+                joueur();
+            } else {
+                window.alert("Colonne pleine !")
+            }
+            vertiHori()
+            diagonale()
+            antiDiagonale()
+        })
+        col3.addEventListener("click", function () {
+        
+            if (k >= 1) {
+                if (player == 1) {
+                    document.querySelector(".case3-" + k).id = "pionRouge";
+                    k--
+                } else {
+                    document.querySelector(".case3-" + k).id = "pionJaune";
+                    k--
+                }
+                joueur();
+            } else {
+                window.alert("Colonne pleine !")
+            }
+            vertiHori()
+            diagonale()
+            antiDiagonale()
+        })
+        col4.addEventListener("click", function () {
+        
+            if (l >= 1) {
+                if (player == 1) {
+                    document.querySelector(".case4-" + l).id = "pionRouge";
+                    l--
+                } else {
+                    document.querySelector(".case4-" + l).id = "pionJaune";
+                    l--
+                }
+                joueur();
+            } else {
+                window.alert("Colonne pleine !")
+            }
+            vertiHori()
+            diagonale()
+            antiDiagonale()
+        })
+        col5.addEventListener("click", function () {
+        
+        
+            if (m >= 1) {
+                if (player == 1) {
+                    document.querySelector(".case5-" + m).id = "pionRouge";
+                    m--
+                } else {
+                    document.querySelector(".case5-" + m).id = "pionJaune";
+                    m--
+                }
+                joueur();
+            } else {
+                window.alert("Colonne pleine !")
+            }
+            vertiHori()
+            diagonale()
+            antiDiagonale()
+        })
+        col6.addEventListener("click", function () {
+        
+            if (n >= 1) {
+                if (player == 1) {
+                    document.querySelector(".case6-" + n).id = "pionRouge";
+                    n--
+                } else {
+                    document.querySelector(".case6-" + n).id = "pionJaune";
+                    n--
+                }
+                joueur();
+            } else {
+                window.alert("Colonne pleine !")
+            }
+            vertiHori()
+            diagonale()
+            antiDiagonale()
+        })
+        col7.addEventListener("click", function () {
+        
+            if (o >= 1) {
+                if (player == 1) {
+                    document.querySelector(".case7-" + o).id = "pionRouge";
+                    o--
+                } else {
+                    document.querySelector(".case7-" + o).id = "pionJaune";
+                    o--
+                }
+                joueur();
+            } else {
+                window.alert("Colonne pleine !")
+            }
+            vertiHori()
+            diagonale()
+            antiDiagonale()
+        })
+        } else if (button == 2) {
 
 
 col1.addEventListener("click", function () {
     if (i >= 1) {
-
-        if (player == 1) {
             document.querySelector(".case1-" + i).id = "pionRouge";
             i--
-        } else {
-            document.querySelector(".case1-" + i).id = "pionJaune";
-            i--
-        }
+            setTimeout(function (){
+pionOrdinateur();
+if (ordiCol == 1){
+    document.querySelector(".case1-" + i).id = "pionRouge";
+}
+            }, 1000);
         joueur();
     } else {
         window.alert("Colonne pleine !")
     }
-
     vertiHori()
     diagonale()
     antiDiagonale()
@@ -71,17 +183,18 @@ col1.addEventListener("click", function () {
 col2.addEventListener("click", function () {
 
     if (j >= 1) {
-        if (player == 1) {
-            document.querySelector(".case2-" + j).id = "pionRouge";
-            j--
-        } else {
-            document.querySelector(".case2-" + j).id = "pionJaune";
-            j--
-        }
-        joueur();
-    } else {
-        window.alert("Colonne pleine !")
-    }
+        document.querySelector(".case1-" + j).id = "pionRouge";
+        i--
+        setTimeout(function (){
+            pionOrdinateur();
+            if (ordiCol == 2){
+                document.querySelector(".case1-" + i).id = "pionRouge";
+            }
+        }, 1000);
+    joueur();
+} else {
+    window.alert("Colonne pleine !")
+}
     vertiHori()
     diagonale()
     antiDiagonale()
@@ -89,17 +202,18 @@ col2.addEventListener("click", function () {
 col3.addEventListener("click", function () {
 
     if (k >= 1) {
-        if (player == 1) {
-            document.querySelector(".case3-" + k).id = "pionRouge";
-            k--
-        } else {
-            document.querySelector(".case3-" + k).id = "pionJaune";
-            k--
-        }
-        joueur();
-    } else {
-        window.alert("Colonne pleine !")
-    }
+        document.querySelector(".case1-" + k).id = "pionRouge";
+        i--
+        setTimeout(function (){
+            pionOrdinateur();
+            if (ordiCol == 3){
+                document.querySelector(".case1-" + i).id = "pionRouge";
+            }
+        }, 1000);
+    joueur();
+} else {
+    window.alert("Colonne pleine !")
+}
     vertiHori()
     diagonale()
     antiDiagonale()
@@ -107,17 +221,18 @@ col3.addEventListener("click", function () {
 col4.addEventListener("click", function () {
 
     if (l >= 1) {
-        if (player == 1) {
-            document.querySelector(".case4-" + l).id = "pionRouge";
-            l--
-        } else {
-            document.querySelector(".case4-" + l).id = "pionJaune";
-            l--
-        }
-        joueur();
-    } else {
-        window.alert("Colonne pleine !")
-    }
+        document.querySelector(".case1-" + l).id = "pionRouge";
+        i--
+        setTimeout(function (){
+            pionOrdinateur();
+            if (ordiCol == 4){
+                document.querySelector(".case1-" + i).id = "pionRouge";
+            }
+        }, 1000);
+    joueur();
+} else {
+    window.alert("Colonne pleine !")
+}
     vertiHori()
     diagonale()
     antiDiagonale()
@@ -126,17 +241,18 @@ col5.addEventListener("click", function () {
 
 
     if (m >= 1) {
-        if (player == 1) {
-            document.querySelector(".case5-" + m).id = "pionRouge";
-            m--
-        } else {
-            document.querySelector(".case5-" + m).id = "pionJaune";
-            m--
-        }
-        joueur();
-    } else {
-        window.alert("Colonne pleine !")
-    }
+        document.querySelector(".case1-" + m).id = "pionRouge";
+        i--
+        setTimeout(function (){
+            pionOrdinateur();
+            if (ordiCol == 5){
+                document.querySelector(".case1-" + i).id = "pionRouge";
+            }
+        }, 1000);
+    joueur();
+} else {
+    window.alert("Colonne pleine !")
+}
     vertiHori()
     diagonale()
     antiDiagonale()
@@ -144,17 +260,18 @@ col5.addEventListener("click", function () {
 col6.addEventListener("click", function () {
 
     if (n >= 1) {
-        if (player == 1) {
-            document.querySelector(".case6-" + n).id = "pionRouge";
-            n--
-        } else {
-            document.querySelector(".case6-" + n).id = "pionJaune";
-            n--
-        }
-        joueur();
-    } else {
-        window.alert("Colonne pleine !")
-    }
+        document.querySelector(".case1-" + n).id = "pionRouge";
+        i--
+        setTimeout(function (){
+            pionOrdinateur();
+            if (ordiCol == 6){
+                document.querySelector(".case1-" + i).id = "pionRouge";
+            }
+        }, 1000);
+    joueur();
+} else {
+    window.alert("Colonne pleine !")
+}
     vertiHori()
     diagonale()
     antiDiagonale()
@@ -162,21 +279,24 @@ col6.addEventListener("click", function () {
 col7.addEventListener("click", function () {
 
     if (o >= 1) {
-        if (player == 1) {
-            document.querySelector(".case7-" + o).id = "pionRouge";
-            o--
-        } else {
-            document.querySelector(".case7-" + o).id = "pionJaune";
-            o--
-        }
-        joueur();
-    } else {
-        window.alert("Colonne pleine !")
-    }
+        document.querySelector(".case1-" + o).id = "pionRouge";
+        i--
+        setTimeout(function (){
+            pionOrdinateur();
+            if (ordiCol == 7){
+                document.querySelector(".case1-" + i).id = "pionRouge";
+            }
+        }, 1000);
+    joueur();
+} else {
+    window.alert("Colonne pleine !")
+}
     vertiHori()
     diagonale()
     antiDiagonale()
 })
+})
+}
 
 function vertiHori() {
     let count = 0;
@@ -455,4 +575,5 @@ function diagonale() {
         y--
         if (count >= 4) document.location.href = "fin2.html";
     }
+}
 }
