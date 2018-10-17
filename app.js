@@ -10,7 +10,7 @@ let col6 = document.querySelector("#colonne6");
 let col7 = document.querySelector("#colonne7");
 let jpp = document.querySelector(".case");
 let player = 1;
-
+let btn1 = document.querySelector("#niveau1");
 let i = 6;
 let j = 6;
 let k = 6;
@@ -18,7 +18,7 @@ let l = 6;
 let m = 6;
 let n = 6;
 let o = 6;
-
+console.log(btn1.value)
 function joueur() {
     if (player == 1) {
         player = 2;
