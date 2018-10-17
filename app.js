@@ -6,7 +6,7 @@ let tableau = [ // tableau general
     [null, null, null, null, null, null, null], // Element  2 du tableau general
     [null, null, null, null, null, null, null], // Element  3 du tableau general
     [null, null, null, null, null, null, null], // Element  4 du tableau general
-    [null, null, null, null, null, null, null] // Element  5 du tableau general
+    [null, null, null, null, null, null, null]  // Element  5 du tableau general
 ];
 
 function verification() {
@@ -47,6 +47,13 @@ window.addEventListener("click", function (e) {
         let li = e.target.dataset.ligne;
         this.console.log(li , col)
 
+        let count = 0;
+        for (i = 0; i<7; i++) {
+            count = (grille.getAttribute(`div[data-ligne ="${i}"]`)).className == "pionRouge" ? count + 1 : 0;
+            this.console.log(count)
+            if (count >= 4) window.alert("Le rouge a gagné !");
+        }
+
         if (player == 1) {
             if (e.target.className == "case") {
                 e.target.className = "pionRouge"
@@ -75,15 +82,19 @@ function changementCouleurJ2() {
 }
 
 
+// function vertiHori (li){
 
 
+//             let count = 0;
+//             for (i = 0; i<7; i++) {
+//                 count = (e.target.getAttribute('data-ligne ="'+li+'"').className) == "pionRouge" ? count + 1 : 0;
+//                 co++;
+//                 if (count >= 4) window.alert("Le rouge a gagné !");
+//             }
+    
+        
 
-
-
-
-
-
-
+//     }
 
 
 
