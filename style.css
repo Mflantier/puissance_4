@@ -1,3 +1,7 @@
+.background_main {
+    background: url(./media/backgroundmain.jpg);
+}
+
 .acceuil{
     font-size: 130px;
     padding-bottom: 120px;
@@ -18,6 +22,7 @@ a{
 }
 .jeux {
     border: solid;
+    border-radius: 5px;
     height: 700px;
 }
 
@@ -29,7 +34,7 @@ a{
     border: solid;
     width: 25%;
     height: 100%;
-    background-color: #70a1ff;
+    background-color: transparent;
  
 }
 
@@ -52,21 +57,171 @@ background-size: 108px;
     background-image: url("pionrouge.png");
 background-color:rgb(214, 0, 10);
 background-size: 108px;
-
-
 }
 
 .joueurx {
     border: solid;
     background-color: #70a1ff;
+    border-radius: 5px;
 }
 
 .joueur1 {
     background-color: red;
+    border-radius: 5px;
+    width: 25%;
+    margin: auto;
     border: solid;
 }
 
 .joueur2 {
     background-color: yellow;
+    border-radius: 5px;
     border: solid;
+    width: 25%;
+    margin: auto;
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .jeux {
+        height: 100%;
+        margin-bottom: 25px;
+    }
+
+    .joueurx{
+        width: 85%;
+        margin: auto;
+        margin-top: 25px;
+        font-size: 25px;
+    }
+
+    .joueur1 {
+        font-size: 25px;
+    }
+
+    .joueur2 {
+        font-size: 25px;
+    }
+
+    .case {
+        border: solid;
+        margin: auto;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.493);
+    }
+
+    #pionJaune {
+        background-image: url("pionjaune.png");
+        background-color:rgb(249, 207, 0);
+        background-size: 72px;
+        }
+        
+        #pionRouge {
+            background-image: url("pionrouge.png");
+        background-color:rgb(214, 0, 10);
+        background-size: 72px;
+        }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+    .container{
+        margin-top: 25px;
+    }
+
+    #titre{
+        margin-bottom: 25px!important;
+    }
+    .jeux {
+        height: 100%;
+        margin-bottom: 25px;
+    }
+
+    .joueurx{
+        width: 85%;        
+        margin: auto;
+        font-size: 25px;
+    }
+
+    .joueur1 {
+        font-size: 25px;
+        margin-top: 55px;
+    }
+
+    .joueur2 {
+        font-size: 25px;
+        margin-top: 55px;
+    }
+
+    .case {
+        border: solid;
+        margin: auto;
+        height: 66px;
+        width: 66px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.493);
+    }
+
+    #pionJaune {
+        background-image: url("pionjaune.png");
+        background-color:rgb(249, 207, 0);
+        background-size: 59px;
+        }
+        
+        #pionRouge {
+            background-image: url("pionrouge.png");
+        background-color:rgb(214, 0, 10);
+        background-size: 59px;
+        }
+}
+
+@media (max-width: 575px) {
+    .container{
+        margin-top: 25px;
+    }
+
+    #titre{
+        margin-bottom: 25px!important;
+    }
+    .jeux {
+        height: 100%;
+        margin-bottom: 25px;
+    }
+
+    .joueurx{
+        width: 85%;        
+        margin: auto;
+        font-size: 25px;
+    }
+
+    .joueur1 {
+        font-size: 25px;
+        margin-top: 55px;
+    }
+
+    .joueur2 {
+        font-size: 25px;
+        margin-top: 55px;
+    }
+
+    .case {
+        border: solid;
+        margin: auto;
+        height: 66px;
+        width: 66px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.493);
+    }
+
+    #pionJaune {
+        background-image: url("pionjaune.png");
+        background-color:rgb(249, 207, 0);
+        background-size: 59px;
+        }
+        
+        #pionRouge {
+            background-image: url("pionrouge.png");
+        background-color:rgb(214, 0, 10);
+        background-size: 59px;
+        }
 }

@@ -20,27 +20,28 @@ let n = 6;
 let o = 6;
 console.log(btn1.value)
 function joueur() {
-    if (player == 1) {
-        player = 2;
-        h1.innerHTML = "<p class='joueur2'>JOUEUR 2</p>";
-    } else {
-        player = 1;
-        h1.innerHTML = "<p class='joueur1'>JOUEUR 1</p>";
+    if (button == 1) {
+
+        if (player == 1) {
+            player = 2;
+            h1.innerHTML = "<p class='joueur2'>JOUEUR 2</p>";
+        } else {
+            player = 1;
+            h1.innerHTML = "<p class='joueur1'>JOUEUR 1</p>";
+        }
+
+    } else if (button == 2) {
+
+        if (player == 1) {
+            player = 2;
+            h1.innerHTML = "<p class='joueur2'>ORDINATEUR</p>";
+        } else {
+            player = 1;
+            h1.innerHTML = "<p class='joueur1'>JOUEUR 1</p>";
+        }
+
     }
 }
-
-
-
-
-
-
-// au click
-
-
-
-
-
-
 
 
 
@@ -339,6 +340,7 @@ function antiDiagonale() {
         if (count >= 4) window.alert("Le jaune a gagné !");
     }
 }
+
 function diagonale() {
 
     // =============================== VERIFICATION DE ROUGE =======================================================================================
@@ -417,7 +419,7 @@ function diagonale() {
         y--
         if (count >= 4) window.alert("Le jaune a gagné !");
     }
-  count = 0;
+    count = 0;
     y = 7;
     x = 1;
     for (let diag = 0; diag < 6; diag++) { // Diagonale case1-3 case 2-4 case 3-5 case4-6
