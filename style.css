@@ -225,3 +225,185 @@ background-size: 108px;
         background-size: 59px;
         }
 }
+body {
+}
+
+.case{
+    background-color: rgba(255, 255, 255, 0.637);
+    border: solid;
+    margin: auto;
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+}
+.pionJaune{
+    background: url(./media/pionjaune.png);
+    background-size: 109px;
+    background-repeat: no-repeat;
+    border: solid;
+    margin: auto;
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+}
+.pionRouge{
+    background: url(./media/pionrouge.png);
+    background-size: 109px;
+    background-repeat: no-repeat;
+    border: solid;
+    margin: auto;
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+}
+
+#grille {
+    border-radius: 10px;
+    background-color: #1e3799;
+    width: 60%;
+    border: solid;
+    margin: auto;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 15px;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    
+}
+
+.acceuil{
+    background-color: rgb(0, 0, 0,.5);
+    font-size: 130px;
+    color: antiquewhite;
+    padding-bottom: 120px;
+    padding-top: 50px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.bouttons{
+    padding-top: 10%;
+    font-size: 10%;
+    
+}
+
+#background{
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    overflow: hidden;
+}
+
+.background_video {
+    position: absolute;
+    top: 0;
+    left: -300;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+
+}
+
+.regles{
+background-color: rgb(0, 0, 0,.5);
+color: antiquewhite;
+margin-left: 400px;
+border-radius: 20px 20px 20px 20px;
+}
+
+.para{
+    background-color: rgb(0, 0, 0,.5);  
+    color: antiquewhite;
+    margin-top: 180px;
+    font-size: 19px;
+}
+
+.stylebutton{
+        border-radius:12px 0 12px 0;
+        background: #478bf9;
+        border:none;
+        color:#fff;
+        font:bold 12px Verdana;
+        padding:6px 10px 6px 10px;
+        font-size: 35px;
+}
+
+
+
+
+
+
+/* .acceuil{
+    font-size: 130px;
+    padding-bottom: 120px;
+    padding-top: 50px;
+}
+.para{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+a{
+    margin: 1%;
+}
+.regles{
+    padding-bottom: 3%;
+}
+.bouttons{
+    padding-top: 3%;
+}
+.jeux {
+    border: solid;
+    height: 700px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.colonne {
+    border: solid;
+    width: 25%;
+    height: 100%;
+    background-color: #70a1ff;
+ 
+}
+
+.case {
+    border: solid;
+    margin: auto;
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.493);
+}
+
+#pionJaune {
+background-image: url("pionjaune.png");
+background-color:rgb(249, 207, 0);
+background-size: 108px;
+}
+
+#pionRouge {
+    background-image: url("pionrouge.png");
+background-color:rgb(214, 0, 10);
+background-size: 108px;
+
+
+}
+
+.joueurx {
+    border: solid;
+    background-color: #70a1ff;
+}
+
+.joueur1 {
+    background-color: red;
+    border: solid;
+}
+
+.joueur2 {
+    background-color: yellow;
+    border: solid;
+} */
