@@ -11,20 +11,22 @@
     <title>Puissance 4</title>
 </head>
 
-<body id="background">
+<body>
     <div class="container-fluid">
+            <div id="background"></div>
+            <video autoplay muted loop id="myVideo" class="background_video">
+                    <source src="./media/animatedbackground.mp4">
+                    </video>
         <div class="container">
             <h1 class="acceuil d-flex justify-content-center">PUISSANCE 4</h1>
             <div>
                 <h2 class="regles d-flex justify-content-center mt-5 p-0 col-3">Règles du jeu</h2>
                 <p class="para">Pour gagner une partie de puissance 4, il suffit d'être le premier à aligner 4 jetons de sa couleur
-                    horizontalement, verticalement et diagonalement. Si lors d'une partie,
-                    tous les jetons sont joués sans qu'il y est d'alignement de jetons, la partie est déclaré nulle.</p>
+                    horizontalement, verticalement ou diagonalement. Si lors d'une partie,
+                    tous les jetons sont joués sans qu'il n'y est d'alignement de jetons, la partie est déclarée nulle.</p>
             </div>
-            <div class="bouttons d-flex justify-content-between">
-                <a href="index.html"><button type="button" id="niveau1">Joueur 1 vs Joueur 2</button></a>
-                <a href="#niveau2"><button type="button" id="niveau2">Joueur vs Ordinateur</button></a>
-                <a href="#niveau3"><button type="button" id="niveau3">Joueur 1 vs AI</button></a>
+            <div class="bouttons d-flex justify-content-center">
+                <a href="index.html"><button class="stylebutton" type="button" id="niveau2" onmouseover="colorRandoma()" onmouseout="clearIntera()">Jouer !</button></a>
             </div>
         </div>
     </div>
@@ -34,7 +36,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="accueil.js"></script>
 </body>
 
 </html>
